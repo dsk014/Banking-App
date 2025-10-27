@@ -118,7 +118,7 @@ class Account {
         this.accountNumber = getAccountNumberCounter++;
         this.name = name;
         this.balance = 0;
-        recordTransaction("Account created with initial balance: ₹0");
+        recordTransaction("Account created with initial balance: Rs.0");
     }
 
     public String getName() {
@@ -153,7 +153,7 @@ class Account {
 
         if (depositAmount > 0) {
             balance += depositAmount;
-            recordTransaction("Deposited: ₹" + depositAmount + " | New Balance: ₹" + balance);
+            recordTransaction("Deposited: Rs." + depositAmount + " | New Balance: Rs." + balance);
             System.out.println("Amount " + depositAmount + " deposited successfully");
 
         } else {
@@ -167,7 +167,7 @@ class Account {
 
         if (balance > 0 && balance > withdrawAmount) {
             balance -= withdrawAmount;
-            recordTransaction("Withdrawn: ₹" + withdrawAmount + " | New Balance: ₹" + balance);
+            recordTransaction("Withdrawn: Rs." + withdrawAmount + " | New Balance: Rs." + balance);
             System.out.println("Amount " + withdrawAmount + " Withdrawn successfully");
 
         } else {
